@@ -11,8 +11,8 @@ def function1(word):
 		for pattern in patterns:
 			wordlist.append(word+delimiter+pattern)
 
-words = sys.argv[1:]
-patterns = ['1','12','123','456','1234','12345','123456','321','54321','2018','2019','2020']
+words = sys.argv[2:]
+patterns = ['1','12','123','456','1234','12345','123456','321','54321','2018','2019','2020', '2021', '2022']
 delimiters = ['@','$','&','!']
 delimiters2 = ['','.','_']
 character_convert = {'a':'@','e':'3','o':'0','i':'!','s':'$','h':'#'}
@@ -36,12 +36,13 @@ for character in character_convert.keys():
 		if character in item:
 			wordlist.append(item.replace(character,character_convert[character]))
 
-file = open("password_wordlist.txt","w")
+filename = sys.argv[1]
+file = open(filename,"w")
 for item in wordlist:
 	file.write(item+"\n")
 
-print "*"*50
-print "-"*17 + "Passowrd Guesser" + "-"*17
-print "-"*8 + "I-man : https://github.com/imnkrm/" + "-"*8
-print "*"*50
-print "\n" + str(len(wordlist)) + " words generated and written to \"password_wordlist.txt\""
+print("*"*50)
+print("-"*17 + "Passowrd Guesser" + "-"*17)
+print("-"*8 + "I-man : https://github.com/imnkrm/" + "-"*8)
+print("*"*50)
+print("\n" + str(len(wordlist)) + " words generated and written to " + filename)
