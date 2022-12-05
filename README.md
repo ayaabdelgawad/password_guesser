@@ -8,12 +8,16 @@ Blogpost describing the importance of password guessing: https://medium.com/@aym
 
 <b>Usages:</b><br/>
 
-The expected call takes the format `python password_guesser.py [output file name] [list of keywords]`. See list below for examples
+The expected call takes the format 
+
+`python password_guesser.py [output file name] [list of keywords]`
+
+See list below for examples
 
 <ul>
-	<li>`python password_guesser.py password_wordlist.txt mysql`<br /></li>
-	<li>`python password_guesser.py password_wordlist.txt mysql admin john`<br /></li>
-	<li>`python password_guesser.py password_wordlist.txt mysql "tomcat admin" "jboss admin" backup_user`<br /></li>
+	<li>python password_guesser.py password_wordlist.txt mysql<br /></li>
+	<li>python password_guesser.py password_wordlist.txt mysql admin john<br /></li>
+	<li>python password_guesser.py password_wordlist.txt mysql "tomcat admin" "jboss admin" backup_user<br /></li>
 </ul>
 	
 ![Image description](https://github.com/imnkrm/password_guesser/blob/master/1.png)<br />
